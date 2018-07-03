@@ -1,0 +1,27 @@
+{
+  "name": "fracbeer",
+  "version": "1.0.0",
+  "description": "Teste para candidato a vaga de desenvolvedor Front-end na Fractal Tecnologia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeEd/fracbeer.git"
+  },
+  "keywords": [
+    "fracbeer",
+    "teste",
+    "vaga",
+    "front-end",
+    "fractal",
+    "tecnologia"
+  ],
+  "author": "Guilherme Eduardo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuilhermeEd/fracbeer/issues"
+  },
+  "homepage": "https://github.com/GuilhermeEd/fracbeer#readme"
+}
