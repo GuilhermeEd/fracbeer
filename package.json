@@ -4,7 +4,8 @@
   "description": "Teste para candidato a vaga de desenvolvedor Front-end na Fractal Tecnologia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --hot --inline --mode development"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,23 @@
   "bugs": {
     "url": "https://github.com/GuilhermeEd/fracbeer/issues"
   },
-  "homepage": "https://github.com/GuilhermeEd/fracbeer#readme"
+  "homepage": "https://github.com/GuilhermeEd/fracbeer#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-airbnb": "^2.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.0",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
 }
