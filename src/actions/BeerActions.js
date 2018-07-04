@@ -23,7 +23,7 @@ export const getBeer = (id) => {
     return async (dispatch) => {
         try {
             const { data } = await http.get(`/beers/${id}`);
-            dispatch({ type: GET_BEER_SUCCESS, payload: data });
+            dispatch({ type: GET_BEER_SUCCESS, payload: data[0] });
         } catch (err) {
             console.log(err);
             const message = 'My bad! Couldn\'t find ya beer, mate.';

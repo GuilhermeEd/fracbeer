@@ -3,12 +3,12 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme'
 
-import HomeComponent from '../../src/components/HomeComponent';
+import App from '../src/App';
 
-describe('HomeComponent', () => {
+describe('App', () => {
 
     it('should exist', () => {
-        const wrapper = shallow(<HomeComponent />);
+        const wrapper = shallow(<App />);
         expect(wrapper).to.exist;
     });
 
