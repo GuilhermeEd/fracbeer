@@ -3,7 +3,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme'
 
-import HomeComponent from '../../src/components/HomeComponent';
+import HomeComponent from '../../../src/components/Home/HomeComponent';
 
 describe('HomeComponent', () => {
 

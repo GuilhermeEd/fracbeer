@@ -5,7 +5,7 @@ import reducers from './reducers';
 import ReduxThunk from 'redux-thunk';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import HomeComponent from './components/HomeComponent';
+import HomeComponent from './components/Home/HomeComponent';
 
 const INITIAL_STATE = {};
 const store = createStore(reducers, INITIAL_STATE, applyMiddleware(ReduxThunk));
