@@ -1,5 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getBeerCatalog } from '../actions/BeerActions';
 
-const HomeComponent = () => <h1>Hello World!</h1>
+class HomeComponent extends Component {
+    componentDidMount() {
+        this.props.getBeerCatalog();
+    }
+    render() {
+        return (
+            <h1>Hello World!</h1>
+        );
+    }
+}
 
-export default HomeComponent;
+export default connect(null, { getBeerCatalog })(HomeComponent);
