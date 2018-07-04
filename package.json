@@ -4,7 +4,8 @@
   "description": "Teste para candidato a vaga de desenvolvedor Front-end na Fractal Tecnologia",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-core/register --require test-setup.js ./test --recursive",
+    "test": "mocha --require babel-core/register --require test.setup.js ./test --recursive",
+    "cover": "nyc --reporter=html --reporter=text npm test",
     "dev": "webpack-dev-server --hot --inline --mode development"
   },
   "repository": {
@@ -38,6 +39,7 @@
     "jsdom": "11.11.0",
     "jsdom-global": "3.0.2",
     "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
     "react-addons-test-utils": "^15.6.2",
     "sinon": "^6.1.0",
     "webpack": "^4.14.0",
