@@ -1,0 +1,5 @@
+@import '../../styles/themeColors';
+.dark-list li {
+    background-color: $themeColor-Dark;
+    color: $themeColor-White;
+}
