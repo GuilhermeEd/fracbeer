@@ -11,7 +11,7 @@ class ListComponent extends Component {
 
     _renderItems() {
         if (!this.props.data) return <li className="list-group-item">A "data" prop must be provided</li>;
-        return this.props.data.map((item) => <li className="list-group-item">{item}</li>);
+        return this.props.data.map((item, i) => <li className="list-group-item" key={i}>{item}</li>);
     }
 
     render() {
