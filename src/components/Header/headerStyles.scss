@@ -23,6 +23,8 @@ $bg-img: url('./background-hero.jpg');
         .lead {
             color: $themeColor-White;
             margin-left: 5px;
+            letter-spacing: 1px;
+            word-spacing: 4px;
         }
     }
     .header-followup {
@@ -33,6 +35,8 @@ $bg-img: url('./background-hero.jpg');
         p {
             color: $themeColor-White;
             margin: 5px;
+            letter-spacing: 1px;
+            word-spacing: 4px;
         }
         img {
             align-self: center;

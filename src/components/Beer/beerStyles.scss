@@ -3,8 +3,15 @@
 .beer-item {
     p:first-child {
         text-transform: uppercase;
+        color: $themeColor-Light;
+        font-weight: 600;
+        letter-spacing: 1px;
+        word-spacing: 4px;
     }
     p:nth-child(2) {
-        
+        color: $themeColor-White;
+        font-weight: 300;
+        letter-spacing: 1px;
+        word-spacing: 4px;
     }
 }
