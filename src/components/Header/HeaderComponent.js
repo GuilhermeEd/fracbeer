@@ -2,24 +2,26 @@ import React, { Component } from 'react';
 
 import './headerStyles.scss';
 import logo from '../../images/fracbeer-logo.svg';
+import arrowDown from '../../images/arrow-down.svg';
 
 class HeaderComponent extends Component {
     render() {
         return (
-            <header>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky">
-                    <img className="fracbeer-logo" src={logo} width="60" height="60" alt="FracBeer Logo" />
-                    <a className="navbar-brand color-hover-link" href="/">FracBeer</a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
-                            <a className="nav-item nav-link active underline-hover-link" href="/">Catalog <span className="sr-only">(current)</span></a>
-                        </div>
+            <div className="header-hero">
+                <div className="hero-text-box">
+                    <div>
+                        <img className="fracbeer-logo" src={logo} width={100} height={200} alt="FracBeer Logo" />
                     </div>
-                </nav>
-            </header>
+                    <div>
+                        <h1>Frac Beer</h1>
+                        <p className="lead">Have a sip</p>
+                    </div>
+                </div>
+                <div className="header-followup">
+                    <p>Checkout the best of the best</p>
+                    <img src={arrowDown} width={80} height={50} alt="Arrow Down" />
+                </div>
+            </div>
         );
     }
 }

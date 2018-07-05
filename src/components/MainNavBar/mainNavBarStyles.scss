@@ -1,0 +1,42 @@
+@import '../../styles/themeColors';
+.fracbeer-logo {
+    padding: 5px;
+    filter: drop-shadow(0 -5px 20px $themeColor-Light);
+    -webkit-filter: drop-shadow(0 -5px 20px $themeColor-Light);
+}
+
+.underline-hover-link {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.2s;
+        color: $themeColor-White !important;
+    }
+    &:hover,
+    &:active {
+        border-bottom: 2px solid $themeColor-Light;
+    }
+}
+
+.color-hover-link {
+    &:link,
+    &:visited {
+        transition: color 0.2s, transform 0.2s;
+        color: $themeColor-White;
+    }
+    &:hover,
+    &:active {
+        color: $themeColor-Light !important;
+        transform: scale(1.1);
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 2px $themeColor-Black;
+    z-index: 9999;
+}
