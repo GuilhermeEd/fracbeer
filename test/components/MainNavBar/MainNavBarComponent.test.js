@@ -1,7 +1,7 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow } from 'enzyme'
+import { mount, shallow, render } from 'enzyme'
 
 import MainNavBarComponent from '../../../src/components/MainNavBar/MainNavBarComponent';
 

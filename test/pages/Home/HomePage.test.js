@@ -1,9 +1,9 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow } from 'enzyme'
+import { mount, shallow, render } from 'enzyme'
 
-import HomePage from '../../../src/components/Home/HomePage';
+import HomePage from '../../../src/pages/Home/HomePage';
 
 describe('HomePage', () => {
 
