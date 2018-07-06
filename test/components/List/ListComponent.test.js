@@ -11,7 +11,7 @@ describe('ListComponent', () => {
         const wrapper = shallow(
             <ListComponent data={['a', 'b', 'c']} />
         );
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
 
     it('should have children', () => {

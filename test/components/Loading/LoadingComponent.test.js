@@ -9,7 +9,7 @@ describe('LoadingComponent', () => {
 
     it('should render properly', () => {
         const wrapper = shallow(<LoadingComponent />);
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
 
 });

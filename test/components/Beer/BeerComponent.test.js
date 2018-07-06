@@ -9,7 +9,7 @@ describe('BeerComponent', () => {
 
     it('should render properly', () => {
         const wrapper = shallow(<BeerComponent name="name" tagline="tagline" />);
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
     
 });

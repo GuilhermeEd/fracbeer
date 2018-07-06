@@ -17,7 +17,7 @@ describe('BeerDetailsComponent', () => {
                 link="/"
             />
         );
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
 
 });

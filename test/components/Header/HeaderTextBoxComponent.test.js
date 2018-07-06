@@ -17,7 +17,7 @@ describe('HeaderTextBoxComponent', () => {
                 logoHeight={50}
             />
         );
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
 
     it('should render title correctly', () => {

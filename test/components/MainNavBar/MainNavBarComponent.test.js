@@ -9,7 +9,7 @@ describe('MainNavBarComponent', () => {
 
     it('should render properly', () => {
         const wrapper = shallow(<MainNavBarComponent />);
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
 
 });

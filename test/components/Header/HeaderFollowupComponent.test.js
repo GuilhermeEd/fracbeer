@@ -11,7 +11,7 @@ describe('HeaderFollowupComponent', () => {
         const wrapper = shallow(
             <HeaderFollowupComponent followup="followup message"/>
         );
-        expect(wrapper.length).toEqual(1);
+        expect(wrapper.length).to.equal(1);
     });
 
 });
