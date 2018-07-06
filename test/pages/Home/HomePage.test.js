@@ -1,20 +1,21 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
+
+import configureStore from 'redux-mock-store';
+import ReduxThunk from 'redux-thunk';
 
 import HomePage from '../../../src/pages/Home/HomePage';
 
+const initialState = { BeerReducer: { error: 'Error Message' } };
+const store = configureStore([ReduxThunk])(initialState);
+
 describe('HomePage', () => {
 
-    it('should exist', () => {
-        const wrapper = shallow(<HomePage />);
-        expect(wrapper).to.exist;
+    it('should render properly', () => {
+        const wrapper = shallow(<HomePage store={store} />).dive();
+        expect(wrapper.find('Connect(HomePage)')).to.exist;
     });
-
-    it('should have children', () => {
-        const wrapper = mount(<HomePage />);
-        expect(wrapper.children()).to.exist;
-    })
 
 });

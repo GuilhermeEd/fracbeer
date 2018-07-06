@@ -3,10 +3,6 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme'
 
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducers from '../../../src/reducers';
-
 import BeerDetailsContainer from '../../../src/containers/BeerDetails/BeerDetailsContainer';
 
 describe('BeerDetailsContainer', () => {

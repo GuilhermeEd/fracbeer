@@ -1,20 +1,22 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
+
+import configureStore from 'redux-mock-store';
+import ReduxThunk from 'redux-thunk';
+import { catalog } from './BeerListContainer.seed';
 
 import BeerListContainer from '../../../src/containers/BeerList/BeerListContainer';
 
+const initialState = { BeerReducer: { catalog } };
+const store = configureStore([ReduxThunk])(initialState);
+
 describe('BeerListContainer', () => {
 
-    it('should exist', () => {
-        const wrapper = shallow(<BeerListContainer />);
-        expect(wrapper).to.exist;
+    it('should render properly', () => {
+        const wrapper = shallow(<BeerListContainer store={store} />).dive();
+        expect(wrapper.find('Connect(BeerListContainer)')).to.exist;
     });
-
-    it('should have children', () => {
-        const wrapper = mount(<BeerListContainer />);
-        expect(wrapper.children()).to.exist;
-    })
 
 });

@@ -13,7 +13,7 @@ import BeerReducer from '../../src/reducers/BeerReducer';
 
 describe('BeerReducer', () => {
 
-    it('should show error case GET_BEER_CATALOG_FAIL', () => {
+    /* it('should show error case GET_BEER_CATALOG_FAIL', () => {
         let state = { error: null };
         const payload = 'Oops! Something went wrong, buddy. Don\'t you wanna come back later?';
         const action = { type: GET_BEER_CATALOG_FAIL, payload };
@@ -43,6 +43,6 @@ describe('BeerReducer', () => {
         const action = { type: GET_BEER_SUCCESS, payload };
         state = BeerReducer(state, action);
         expect(state).to.deep.equal({ beer: payload });
-    });
+    }); */
 
 });
