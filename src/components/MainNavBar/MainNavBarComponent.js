@@ -13,7 +13,7 @@ class MainNavBarComponent extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul className="navbar-nav">
                         <li>
-                            <a className="nav-item nav-link active underline-hover-link" href="/">Catalog <span className="sr-only">(current)</span></a>
+                            <a className="nav-item nav-link active underline-hover-link" href="/#catalog-link">Catalog <span className="sr-only">(current)</span></a>
                         </li>
                     </ul>
                 </div>

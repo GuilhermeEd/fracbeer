@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 import BeerComponent from '../../components/Beer/BeerComponent';
 import ListComponent from '../../components/List/ListComponent';
@@ -18,7 +19,11 @@ class BeerListContainer extends Component {
     async componentDidMount() {
         await this.props.getBeerCatalog();
         const beers = this.props.catalog.map((beer) => {
-            return <BeerComponent id={beer.id} name={beer.name} tagline={beer.tagline} />
+            return (
+                <Link to='/details/:id'>
+                    <BeerComponent id={beer.id} name={beer.name} tagline={beer.tagline} />
+                </Link>
+            );
         });
         this.setState({ beers });
     }

@@ -1,18 +1,24 @@
 @import 'themeColors';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600');
-
-$theme-font: 'Montserrat', sans-serif;
-
+$theme-font: 'Montserrat',
+sans-serif;
 body {
   font-family: $theme-font;
   font-weight: 300;
   background-color: $themeColor-Black;
-  h1, h2 {
+  h1,
+  h2 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 48px;
     letter-spacing: 4px;
     line-height: 1.4;
     color: $themeColor-Light;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  button {
+    outline: none;
   }
 }
