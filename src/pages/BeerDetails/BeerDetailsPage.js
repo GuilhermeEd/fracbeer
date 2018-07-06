@@ -10,7 +10,7 @@ class BeerDetailsPage extends Component {
             <div>
                 <header>
                     <MainNavBarComponent />
-                    <HeaderComponent>
+                    <HeaderComponent style={{ display: 'block' }}>
                         <main className="container">
                             <BeerDetailsContainer />
                         </main>

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
 
+
+import BeerDetailsComponent from '../../components/BeerDetails/BeerDetailsComponent';
 import LoadingComponent from '../../components/Loading/LoadingComponent';
 
 import { getBeer } from '../../actions/BeerActions';
-
-import './beerDetailsStyles.scss';
 
 class BeerDetailsContainer extends Component {
 
@@ -22,28 +21,20 @@ class BeerDetailsContainer extends Component {
     async componentDidMount() {
         await this.props.getBeer(this.state.id);
         this.setState({ beer: this.props.beer });
-        console.log(this.state.beer);
     }
 
     render() {
         if (!this.state.beer) return <LoadingComponent />;
         const { name, tagline, description, image_url } = this.state.beer;
         return (
-            <div className="details-container">
-                <div className="details-heading">
-                    <p className="details-title">Title</p>
-                    <p className="details-subtitle">Subtitle</p>
-                </div>
-                <div className="details-content">
-                    <div className="details-img">
-                        <img src={image_url} alt={name} />
-                    </div>
-                    <div className="details-description">
-                        <p>Description...</p>
-                        <Link to="/">Voltar</Link>
-                    </div>
-                </div>
-            </div>
+            <BeerDetailsComponent
+                title={name}
+                subtitle={tagline}
+                img={image_url}
+                description={description}
+                link={'/'}
+                linkDescription='Voltar'
+            />
         );
     }
 

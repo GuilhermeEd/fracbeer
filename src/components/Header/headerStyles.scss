@@ -1,6 +1,7 @@
 @import '../../styles/themeColors';
 $bg-img: url('../../images/background-hero.jpg');
 .header-hero {
+    display: block;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $bg-img;
     background-attachment: fixed;
     background-position: center;
