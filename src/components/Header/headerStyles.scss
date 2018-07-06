@@ -1,5 +1,5 @@
 @import '../../styles/themeColors';
-$bg-img: url('./background-hero.jpg');
+$bg-img: url('../../images/background-hero.jpg');
 .header-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $bg-img;
     background-attachment: fixed;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './listStyles.scss';
+import activityIndicator from '../../images/loading.gif';
 
 class ListComponent extends Component {
 
@@ -10,8 +11,18 @@ class ListComponent extends Component {
     }
 
     _renderItems() {
-        if (!this.props.data) return <li className="list-group-item">A "data" prop must be provided</li>;
-        return this.props.data.map((item, i) => <li className="list-group-item" key={i}>{item}</li>);
+        if (!this.props.data) {
+            return (
+                <li className="list-group-item">
+                    <img className="activity-indicator" src={activityIndicator} alt="Loading" />
+                </li>
+            );
+        }
+        return this.props.data.map((item, i) => {
+            <li className="list-group-item" key={item.id || i}>
+                {item}
+            </li>
+        });
     }
 
     render() {

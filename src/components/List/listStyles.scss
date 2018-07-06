@@ -2,4 +2,9 @@
 .dark-list li {
     background-color: $themeColor-Dark;
     color: $themeColor-White;
+    .activity-indicator {
+        display: block;
+        margin: 0 auto;
+        height: 10px;
+    }
 }
