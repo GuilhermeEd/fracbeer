@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode production && node server.js",
-    "test": "mocha --require babel-polyfill --require babel-core/register --require test.setup.js --require ignore-styles ./test --recursive",
+    "test": "mocha --require babel-polyfill --require babel-core/register --require test.setup.js --require ignore-styles --timeout 15000 ./test --recursive",
     "cover": "nyc --reporter=html --reporter=text npm test",
     "dev": "webpack-dev-server --hot --inline --mode development --open"
   },

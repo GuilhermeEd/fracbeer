@@ -6,11 +6,6 @@ import './listStyles.scss';
 
 class ListComponent extends Component {
 
-    constructor(props) {
-        super(props);
-        this._renderItems = this._renderItems.bind(this);
-    }
-
     _renderItems() {
         if (!this.props.data) {
             return (

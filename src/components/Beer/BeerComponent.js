@@ -6,8 +6,8 @@ class BeerComponent extends Component {
     render() {
         return (
             <div className="beer-item">
-                <p>{this.props.name || ''}</p>
-                <p>{this.props.tagline || ''}</p>
+                <p>{this.props.name}</p>
+                <p>{this.props.tagline}</p>
             </div>
         );
     }

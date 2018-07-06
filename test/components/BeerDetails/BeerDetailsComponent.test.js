@@ -1,20 +1,23 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import BeerDetailsComponent from '../../../src/components/BeerDetails/BeerDetailsComponent';
 
 describe('BeerDetailsComponent', () => {
 
-    it('should exist', () => {
-        const wrapper = shallow(<BeerDetailsComponent />);
-        expect(wrapper).to.exist;
+    it('should render properly', () => {
+        const wrapper = shallow(
+            <BeerDetailsComponent
+                title="title"
+                subtitle="sub"
+                img="https://storage.googleapis.com/gd-wagtail-prod-assets/images/evolving_google_identity_2x.max-4000x2000.jpegquality-90.jpg"
+                description="Lorem ipsum ..."
+                link="/"
+            />
+        );
+        expect(wrapper.length).toEqual(1);
     });
-
-    it('should have children', () => {
-        const wrapper = mount(<BeerDetailsComponent />);
-        expect(wrapper.children()).to.exist;
-    })
 
 });

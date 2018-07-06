@@ -1,20 +1,15 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import MainNavBarComponent from '../../../src/components/MainNavBar/MainNavBarComponent';
 
 describe('MainNavBarComponent', () => {
 
-    it('should exist', () => {
+    it('should render properly', () => {
         const wrapper = shallow(<MainNavBarComponent />);
-        expect(wrapper).to.exist;
+        expect(wrapper.length).toEqual(1);
     });
-
-    it('should have children', () => {
-        const wrapper = mount(<MainNavBarComponent />);
-        expect(wrapper.children()).to.exist;
-    })
 
 });

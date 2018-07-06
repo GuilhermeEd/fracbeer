@@ -1,27 +1,17 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import HeaderFollowupComponent from '../../../src/components/Header/HeaderFollowupComponent';
 
 describe('HeaderFollowupComponent', () => {
 
-    it('should exist', () => {
-        const wrapper = shallow(<HeaderFollowupComponent />);
-        expect(wrapper).to.exist;
+    it('should render properly', () => {
+        const wrapper = shallow(
+            <HeaderFollowupComponent followup="followup message"/>
+        );
+        expect(wrapper.length).toEqual(1);
     });
-
-    it('should have children', () => {
-        const wrapper = mount(<HeaderFollowupComponent />);
-        expect(wrapper.children()).to.exist;
-    })
-
-    it('should render title correctly', () => {
-        const wrapper = mount(<HeaderFollowupComponent />);
-
-        const title = wrapper.find('h1').text();
-        expect(title).to.equal('Frac Beer');
-    })
 
 });

@@ -1,24 +1,35 @@
 import 'jsdom-global/register';
 import React from 'react';
 import { expect } from 'chai';
-import { mount, shallow, render } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import HeaderTextBoxComponent from '../../../src/components/Header/HeaderTextBoxComponent';
 
 describe('HeaderTextBoxComponent', () => {
 
-    it('should exist', () => {
-        const wrapper = shallow(<HeaderTextBoxComponent />);
-        expect(wrapper).to.exist;
+    it('should render properly', () => {
+        const wrapper = shallow(
+            <HeaderTextBoxComponent
+                title="Title"
+                lead="Subtitle"
+                logo="https://storage.googleapis.com/gd-wagtail-prod-assets/images/evolving_google_identity_2x.max-4000x2000.jpegquality-90.jpg"
+                logoWidth={50}
+                logoHeight={50}
+            />
+        );
+        expect(wrapper.length).toEqual(1);
     });
 
-    it('should have children', () => {
-        const wrapper = mount(<HeaderTextBoxComponent />);
-        expect(wrapper.children()).to.exist;
-    })
-
     it('should render title correctly', () => {
-        const wrapper = mount(<HeaderTextBoxComponent />);
+        const wrapper = shallow(
+            <HeaderTextBoxComponent
+                title="Frac Beer"
+                lead="Subtitle"
+                logo="https://storage.googleapis.com/gd-wagtail-prod-assets/images/evolving_google_identity_2x.max-4000x2000.jpegquality-90.jpg"
+                logoWidth={50}
+                logoHeight={50}
+            />
+        );
 
         const title = wrapper.find('h1').text();
         expect(title).to.equal('Frac Beer');

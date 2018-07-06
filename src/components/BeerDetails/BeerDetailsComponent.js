@@ -10,8 +10,8 @@ class BeerDetailsContainer extends Component {
         return (
             <div className="details-container">
                 <div className="details-heading">
-                    <p className="details-title">{this.props.title || ''}</p>
-                    <p className="details-subtitle">{this.props.subtitle || ''}</p>
+                    <p className="details-title">{this.props.title}</p>
+                    <p className="details-subtitle">{this.props.subtitle}</p>
                 </div>
                 <div className="details-content">
                     <div className="details-img">
