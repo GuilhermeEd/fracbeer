@@ -12,7 +12,6 @@ export const getBeerCatalog = () => {
             const { data } = await http.get('/beers');
             dispatch({ type: GET_BEER_CATALOG_SUCCESS, payload: data });
         } catch (err) {
-            console.log(err);
             const message = 'Oops! Something went wrong, buddy. Don\'t you wanna come back later?';
             dispatch({ type: GET_BEER_CATALOG_FAIL, payload: message });
         }
@@ -25,7 +24,6 @@ export const getBeer = (id) => {
             const { data } = await http.get(`/beers/${id}`);
             dispatch({ type: GET_BEER_SUCCESS, payload: data[0] });
         } catch (err) {
-            console.log(err);
             const message = 'My bad! Couldn\'t find ya beer, mate.';
             dispatch({ type: GET_BEER_FAIL, payload: message });
         }
