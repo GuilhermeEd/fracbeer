@@ -6,6 +6,7 @@ body {
   font-family: $theme-font;
   font-weight: 300;
   background-color: $themeColor-Black;
+  overflow-y:scroll;
   h1,
   h2 {
     text-transform: uppercase;

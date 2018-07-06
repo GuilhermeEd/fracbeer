@@ -1,22 +1,20 @@
 @import '../../styles/themeColors';
-.dark-list li {
-    cursor: pointer;
-    background-color: $themeColor-Dark;
-    color: $themeColor-White;
-    transition: background-color 0.2s, transform 0.2s;
-    .activity-indicator {
-        display: block;
-        margin: 0 auto;
-        height: 10px;
-    }
-    &:hover {
-        transform: translateX(5px);
-        background-color: $themeColor-Light;
-        p:first-child {
-            color: $themeColor-Dark;
-        }
-        p:nth-child(2) {
-            color: $themeColor-Black;
+.dark-list {
+    li {
+        padding: 0;
+        cursor: pointer;
+        background-color: $themeColor-Dark;
+        color: $themeColor-White;
+        transition: background-color 0.2s, transform 0.2s;
+        &:hover {
+            transform: translateX(5px);
+            background-color: $themeColor-Light;
+            p:first-child {
+                color: $themeColor-Dark;
+            }
+            p:nth-child(2) {
+                color: $themeColor-Black;
+            }
         }
     }
 }

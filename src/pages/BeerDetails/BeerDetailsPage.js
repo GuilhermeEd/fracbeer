@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import MainNavBarComponent from '../../components/MainNavBar/MainNavBarComponent';
 import HeaderComponent from '../../components/Header/HeaderComponent';
+import BeerDetailsContainer from '../../containers/BeerDetails/BeerDetailsContainer';
 
 class BeerDetailsPage extends Component {
     render() {
@@ -11,7 +12,7 @@ class BeerDetailsPage extends Component {
                     <MainNavBarComponent />
                     <HeaderComponent>
                         <main>
-                            
+                            <BeerDetailsContainer />
                         </main>
                     </HeaderComponent>
                 </header>

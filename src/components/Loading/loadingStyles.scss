@@ -1,0 +1,10 @@
+$loading-gif: url('../../images/loading.gif');
+.activity-indicator {
+    width: 45px;
+    height: 11px;
+    display: block;
+    margin: 20px auto;
+    background-size: contain;
+    background-image: $loading-gif;
+    background-repeat: no-repeat;
+}

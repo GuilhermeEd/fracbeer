@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
+import LoadingComponent from '../Loading/LoadingComponent';
+
 import './listStyles.scss';
-import activityIndicator from '../../images/loading.gif';
 
 class ListComponent extends Component {
 
@@ -14,7 +15,7 @@ class ListComponent extends Component {
         if (!this.props.data) {
             return (
                 <li className="list-group-item">
-                    <img className="activity-indicator" src={activityIndicator} alt="Loading" />
+                    <LoadingComponent />
                 </li>
             );
         }

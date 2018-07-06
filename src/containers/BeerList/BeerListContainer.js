@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import BeerComponent from '../../components/Beer/BeerComponent';
 import ListComponent from '../../components/List/ListComponent';
@@ -20,7 +20,7 @@ class BeerListContainer extends Component {
         await this.props.getBeerCatalog();
         const beers = this.props.catalog.map((beer) => {
             return (
-                <Link to='/details/:id'>
+                <Link to={`/details/${beer.id}`}>
                     <BeerComponent id={beer.id} name={beer.name} tagline={beer.tagline} />
                 </Link>
             );

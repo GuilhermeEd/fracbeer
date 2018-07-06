@@ -9,11 +9,14 @@ module.exports = {
     devServer: {
         hot: true,
         inline: true,
-        port: 3333,
+        port: 3000,
         contentBase: './public',
     },
     resolve: {
         extensions: ['.js', '.jsx'],
+    },
+    performance: {
+        hints: false,
     },
     module: {
         rules: [{
