@@ -7,13 +7,15 @@ import LoadingComponent from '../../components/Loading/LoadingComponent';
 
 import { getBeer } from '../../actions/BeerActions';
 
+import './beerDetailsStyles.scss';
+
 class BeerDetailsContainer extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             id: this.props.match.params.id,
-            beer: null, // name, tagline, description e image_url.
+            beer: null,
         }
     }
 
@@ -24,7 +26,25 @@ class BeerDetailsContainer extends Component {
     }
 
     render() {
-        return <LoadingComponent />
+        if (!this.state.beer) return <LoadingComponent />;
+        const { name, tagline, description, image_url } = this.state.beer;
+        return (
+            <div className="details-container">
+                <div className="details-heading">
+                    <p className="details-title">Title</p>
+                    <p className="details-subtitle">Subtitle</p>
+                </div>
+                <div className="details-content">
+                    <div className="details-img">
+                        <img src={image_url} alt={name} />
+                    </div>
+                    <div className="details-description">
+                        <p>Description...</p>
+                        <Link to="/">Voltar</Link>
+                    </div>
+                </div>
+            </div>
+        );
     }
 
 }

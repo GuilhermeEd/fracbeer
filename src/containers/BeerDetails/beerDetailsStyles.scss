@@ -1,0 +1,78 @@
+@import '../../styles/themeColors';
+.details-container {
+    max-width: 556px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    .details-heading {
+        p {
+            text-transform: uppercase;
+            word-spacing: 4px;
+            letter-spacing: 2px;
+            &.details-title {
+                color: $themeColor-Light;
+                font-weight: 400;
+                font-size: 42px;
+                margin: 0;
+            }
+            &.details-subtitle {
+                color: $themeColor-White;
+                font-weight: 300;
+                font-size: 24px;
+            }
+        }
+    }
+    .details-content {
+        display: flex;
+        flex-direction: row;
+        margin: 16px 0;
+        .details-img {
+            background-color: $themeColor-White;
+            border-radius: 5px;
+            max-height: 40%;
+            height: 400px;
+            width: 400px;
+            img {
+                padding: 15px;
+                display: block;
+                margin: 0 auto;
+                height: 100%;
+                width: auto;
+            }
+        }
+        .details-description {
+            margin-left: 20px;
+            p {
+                color: $themeColor-White;
+                word-spacing: 3px;
+                letter-spacing: 1px;
+            }
+            a {
+                color: $themeColor-Light;
+                font-weight: 400;
+                font-size: 24px;
+                transition: color 0.2s;
+                padding: 5px 15px;
+                border: 2px solid;
+                border-radius: 5px;
+                border-color: $themeColor-Light;
+                background-color: transparent;
+                transition: color 0.2s, background-color 0.2s;
+                &:hover {
+                    color: $themeColor-Black;
+                    background-color: $themeColor-Light;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .details-content {
+        flex-direction: column !important;
+    }
+    .details-description {
+        margin-left: 0;
+    }
+}

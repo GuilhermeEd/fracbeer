@@ -11,7 +11,7 @@ class BeerDetailsPage extends Component {
                 <header>
                     <MainNavBarComponent />
                     <HeaderComponent>
-                        <main>
+                        <main className="container">
                             <BeerDetailsContainer />
                         </main>
                     </HeaderComponent>
