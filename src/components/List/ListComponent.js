@@ -19,9 +19,11 @@ class ListComponent extends Component {
             );
         }
         return this.props.data.map((item, i) => {
-            <li className="list-group-item" key={item.id || i}>
-                {item}
-            </li>
+            return (
+                <li className="list-group-item" key={item.id || i}>
+                    {item}
+                </li>
+            );
         });
     }
 
