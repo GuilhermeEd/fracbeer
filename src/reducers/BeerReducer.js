@@ -17,11 +17,11 @@ export default (state = INITIAL_STATE, action) => {
         case GET_BEER_CATALOG_FAIL:
             return { ...state, error: action.payload };
         case GET_BEER_CATALOG_SUCCESS:
-            return { ...state, catalog: action.payload };
+            return { ...state, catalog: action.payload, error: null };
         case GET_BEER_FAIL:
             return { ...state, error: action.payload };
         case GET_BEER_SUCCESS:
-            return { ...state, beer: action.payload };
+            return { ...state, beer: action.payload, error: null };
         default:
             return state;
     };

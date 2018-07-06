@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-
 import BeerDetailsComponent from '../../components/BeerDetails/BeerDetailsComponent';
 import LoadingComponent from '../../components/Loading/LoadingComponent';
 
 import { getBeer } from '../../actions/BeerActions';
+
+import './beerDetailsStyles.scss';
 
 class BeerDetailsContainer extends Component {
 
@@ -24,7 +25,8 @@ class BeerDetailsContainer extends Component {
     }
 
     render() {
-        if (!this.state.beer) return <LoadingComponent />;
+        if (this.props.error) return <div className="center-container" ><a href="/">Voltar</a></div>;
+        if (!this.state.beer) return <div className="center-container"><LoadingComponent /></div>;
         const { name, tagline, description, image_url } = this.state.beer;
         return (
             <BeerDetailsComponent
@@ -43,6 +45,7 @@ class BeerDetailsContainer extends Component {
 const mapStateToProps = (state) => {
     return {
         beer: state.BeerReducer.beer,
+        error: state.BeerReducer.error,
     }
 }
 

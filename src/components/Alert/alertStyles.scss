@@ -1,0 +1,19 @@
+@import '../../styles/themeColors.scss';
+.floating-alert {
+    position: fixed;
+    top: 65px;
+    right: 15px;
+    left: 15px;
+    color: $themeColor-Light;
+    border-color: $themeColor-Light;
+    background-color: transparent;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    z-index: 9999;
+    button span {
+        color: $themeColor-Light;
+        opacity: 1;
+        text-shadow: none;
+    }
+}

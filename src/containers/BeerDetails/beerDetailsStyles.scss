@@ -1,0 +1,23 @@
+@import '../../styles/themeColors';
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    a {
+        color: $themeColor-Light;
+        font-weight: 400;
+        font-size: 24px;
+        transition: color 0.2s;
+        padding: 5px 15px;
+        border: 2px solid;
+        border-radius: 5px;
+        border-color: $themeColor-Light;
+        background-color: transparent;
+        transition: color 0.2s, background-color 0.2s;
+        &:hover {
+            color: $themeColor-Black;
+            background-color: $themeColor-Light;
+        }
+    }
+}
