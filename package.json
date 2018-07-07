@@ -1,7 +1,7 @@
 {
   "name": "fracbeer",
   "version": "1.0.0",
-  "description": "Teste para candidato a vaga de desenvolvedor Front-end na Fractal Tecnologia",
+  "description": "Projeto desenvolvido para o teste da Fractal Tecnologia",
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode production && node server.js",
